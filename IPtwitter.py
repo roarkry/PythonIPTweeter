@@ -5,7 +5,7 @@ import httplib
 import sys
 import os
 
-#OAuth Credentials
+#OAuth Credentials - some garbage twitter account I created
 api = twitter.Api("98FCOXIIoHp2IB8aPDSlcg",
 "ckTVLL6W5yTBw6LSASCD2HQC3poDOrGcWq7dBliMfIA",
 "266344567-tN51PHf94d4NOwlJoLmmX1YUqeV3oMJ0zICFzVzT",
@@ -38,6 +38,8 @@ while(True):
     if currentIP != lastIP:
       #print "new ip", currentIP
       lastIP = currentIP
+      
+      #obscure the IP in a way that is obvious to me, but no one else...
       obscured = lastIP.split('.')
       obscured[0] = str(int(obscured[0]) + 1)
       obscured[1] = str(int(obscured[1]) + 2)
